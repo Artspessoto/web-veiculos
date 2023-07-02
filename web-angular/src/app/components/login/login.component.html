@@ -1,0 +1,25 @@
+<div class="background">
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
+<form>
+  <h3>Login</h3>
+
+  <label for="username">Usuário</label>
+  <input
+    type="text"
+    placeholder="Nome de usuário"
+    name="username"
+    [(ngModel)]="username"
+  />
+
+  <label for="password">Senha</label>
+  <input
+    type="password"
+    placeholder="Digite sua senha"
+    name="password"
+    [(ngModel)]="password"
+  />
+
+  <button type="button" (click)="Login()">Entrar</button>
+</form>

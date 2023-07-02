@@ -1,0 +1,116 @@
+<div class="container mx-auto p-4">
+  <h1 class="font-bold py-6 text-xl">Novo veículo</h1>
+  <form class="gap-x-6 px-5 py-2 max-w-md mx-auto">
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="brand"
+        >Marca: *
+      </label>
+      <input
+        type="text"
+        id="brand"
+        name="brand"
+        maxlength="50"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        [(ngModel)]="veiculo.Marca"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="name"
+        >Nome: *</label
+      >
+      <input
+        type="text"
+        id="name"
+        name="name"
+        maxlength="100"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        [(ngModel)]="veiculo.Nome"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="modelYear"
+        >Ano do modelo: *</label
+      >
+      <input
+        type="number"
+        id="modelYear"
+        name="modelYear"
+        min="1884"
+        max="2023"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        [(ngModel)]="veiculo.AnoModelo"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="dateFactory"
+        >Data de fabricação: *</label
+      >
+      <input
+        type="date"
+        id="dateFactory"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        name="dateFactory"
+        [(ngModel)]="veiculo.DataFabricacao"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="value"
+        >Valor em R$: *</label
+      >
+      <input
+        type="number"
+        id="value"
+        name="value"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        min="1"
+        step="0.01"
+        [(ngModel)]="veiculo.Valor"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="optional"
+        >Informações opcionais:
+      </label>
+      <textarea
+        name="optional"
+        cols="50"
+        rows="5"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        [(ngModel)]="veiculo.Opcionais"
+      ></textarea>
+    </div>
+
+    <div class="flex gap-x-4">
+      <button
+        type="button"
+        class="bg-green-700 px-3 py-1 hover:bg-green-500 rounded text-white"
+        (click)="insertVehicle()"
+      >
+        Cadastrar
+      </button>
+      <button
+        type="reset"
+        class="bg-red-700 px-3 py-1 hover:bg-red-500 rounded text-white"
+      >
+        Limpar
+      </button>
+      <button
+        type="button"
+        class="bg-yellow-700 px-3 py-1 hover:bg-yellow-500 rounded text-white"
+        (click)="backPage()"
+      >
+        Voltar
+      </button>
+    </div>
+  </form>
+</div>

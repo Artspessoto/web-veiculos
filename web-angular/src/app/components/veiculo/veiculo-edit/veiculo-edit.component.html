@@ -1,0 +1,117 @@
+<div class="container mx-auto p-4">
+  <h2 class="font-bold py-6 text-xl">Informações do veículo</h2>
+  <form class="gap-x-6 px-5 py-2 max-w-md mx-auto">
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for=""
+        >Código do veículo:</label
+      >
+      <label for="">{{ veiculo.Id }}</label>
+    </div>
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="brand"
+        >Marca:
+      </label>
+      <input
+        type="text"
+        id="brand"
+        name="brand"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        maxlength="50"
+        [(ngModel)]="veiculo.Marca"
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="name"
+        >Nome:
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        maxlength="100"
+        [(ngModel)]="veiculo.Nome"
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="modelYear"
+        >Ano do modelo:
+      </label>
+      <input
+        type="number"
+        id="modelYear"
+        name="modelYear"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        min="1884"
+        max="2023"
+        [(ngModel)]="veiculo.AnoModelo"
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="dateFactory"
+        >Data de fabricação:
+      </label>
+      <input
+        type="date"
+        id="dateFactory"
+        name="dateFactory"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        min="1884-01-01"
+        max="2023-05-12"
+        [(ngModel)]="veiculo.DataFabricacao.split('T')[0]"
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="value"
+        >Valor em R$:
+      </label>
+      <input
+        type="number"
+        id="value"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        name="value"
+        [(ngModel)]="veiculo.Valor"
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-bold text-gray-600 mb-2" for="optional"
+        >Informações opcionais:
+      </label>
+      <textarea
+        name="optional"
+        cols="50"
+        rows="5"
+        class="shadow appearence-none border rounded focus:outline-none focus:shadow-outline px-3 leading-tight py-1 w-full"
+        [(ngModel)]="veiculo.Opcionais"
+      ></textarea>
+    </div>
+
+    <div class="flex gap-4">
+      <button
+        type="button"
+        class="bg-green-700 px-3 py-1 hover:bg-green-500 rounded text-white"
+        (click)="confirmUpdate(veiculo.Id)"
+      >
+        Atualizar
+      </button>
+      <button
+        type="reset"
+        class="bg-red-700 px-3 py-1 hover:bg-red-500 rounded text-white"
+      >
+        Limpar
+      </button>
+      <button
+        type="button"
+        class="bg-yellow-700 px-3 py-1 hover:bg-yellow-500 rounded text-white"
+        (click)="backPage()"
+      >
+        Voltar
+      </button>
+    </div>
+  </form>
+</div>

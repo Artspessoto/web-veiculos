@@ -1,0 +1,20 @@
+main {
+  /* background-image: url(https://www.tribunapr.com.br/wp-content/uploads/2021/01/26012146/concessionaria-toyota-sulpar-Alto-XV-2_Rodolfo-Buhrer-970x550.jpg); */
+  background-image: url(https://img.freepik.com/vetores-gratis/centro-de-showroom-de-automoveis-com-exposicao-de-automoveis-dentro-da-loja-de-concessionarias-de-automoveis-interior-de-novos-modelos-de-veiculos-modernos-demonstracao-venda-e-comercio_575670-1511.jpg?w=826&t=st=1684906252~exp=1684906852~hmac=c0ab4c6b2f5e913a0567b21c9916111bc130f5d118492253487e954f1d93f394);
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 32px;
+}
+
+p{
+  color: white;
+  text-align: center;
+}
